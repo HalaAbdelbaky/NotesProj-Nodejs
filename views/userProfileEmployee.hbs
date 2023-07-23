@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="index">
+        <div class="overlay">
+            <div class="body">
+        <h1>techNotes</h1>
+        <div class="line"></div>
+        <h1>Welcome &&nbsp; {{user.username}}</h1>
+        <div >
+        <a href="/" class="logout">Logout</a>
+      </div>
+       <div class="list">
+        <ul>
+            <li><a href="/userProfile/notes/view/{{user._id}}">View TechNote</a></li>
+            <li><a href="/userProfile/notes/new">Add New TechNotes</a></li>
+        </ul>
+       </div>
+    </div>
+        <div class="footer">
+            <div class="line"></div>
+            <div ><a href="/userProfile/{{user.id}}">Current User:{{user.username}}&nbsp;&nbsp; Status:{{user.roles}}</a></div>
+        </div>
+    </div>
+    </div> 
+    <script>
+  const logoutLink = document.querySelector('.logout');
+  logoutLink.addEventListener('click', event => {
+    event.preventDefault();
+    const url = logoutLink.getAttribute('href');
+    fetch(url)
+  });
+</script>
+</body>
+</html>

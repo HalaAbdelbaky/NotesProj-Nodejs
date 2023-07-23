@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="index">
+      <div class="overlay">
+        <div class="body">
+          <div class="line"></div>
+          <h1> New Note</h1>
+          <form method="post" class="notes">
+            <label for="title">Message Title:</label>
+            <input type="text" id="title" name="title"  value={{note.title}}/>
+            <label for="text">Message Text:</label>
+            <textarea id="text" name="text" rows="8" cols="80">{{note.text}} </textarea>
+            <input type="submit" value="Add" />
+          </form>
+          <div class="footer" style=" margin-top: 46vh;">
+            <div class="line"></div>
+            <div><a href="/userProfile/{{req.id}}">current user :
+               {{req.user}}</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

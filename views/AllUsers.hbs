@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="index">
+        <div class="overlay">
+        <div class="body">
+        <h1>techNotes</h1>
+        <div class="line"></div>
+        <h1>Welcome &&nbsp; {{username}}</h1>
+      <table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Roles</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+     {{{userRows}}}
+  </tbody>
+</table>
+    </div>
+        <div class="footer">
+            <div class="line"></div>
+            <div ><a href="/userProfile/{{id}}">Current User:{{username}}&nbsp;&nbsp; Status:{{roles}}</a></div>
+        </div>
+    </div>
+    </div> 
+</body>

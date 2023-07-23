@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="index">
+    <div class="overlay">
+      <div class="body">
+        <h1>techNotes</h1>
+        <div class="line"></div>
+        <h1> view Notes</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Title</th>
+              <th>Created</th>
+              <th>Updated</th>
+              <th>User</th>
+              <th>Add</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{{noteRows}}}
+          </tbody>
+        </table>
+        <div class="footer" style="margin-top:7vh">
+          <div class="line"></div>
+          <div><a href="/userProfile/{{user.id}}">current user :
+              {{user.username}}</a>  &nbsp; Status:{{user.roles}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
